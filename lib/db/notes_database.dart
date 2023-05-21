@@ -63,7 +63,6 @@ CREATE TABLE $tableNotes (
     }
   }
 
-
   Future<List<Note>> readAllNotes() async {
     final db = await instance.database;
 
@@ -94,7 +93,6 @@ CREATE TABLE $tableNotes (
       whereArgs: [id],
     );
   }
-
 
   Future close() async {
     final db = await instance.database;

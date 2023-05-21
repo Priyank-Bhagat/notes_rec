@@ -32,18 +32,17 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
   Future refreshNote() async {
     setState(() => isLoading = true);
 
-    this.note = await NotesDatabase.instance.readNote(widget.noteId);
+    note = await NotesDatabase.instance.readNote(widget.noteId);
 
     setState(() => isLoading = false);
   }
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
     return Scaffold(
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 17 , horizontal: 16),
+            padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 16),
             child: Column(
               children: [
                 Row(
@@ -54,25 +53,27 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_back_ios_outlined,
                       ),
                     ),
-                    RichText(text: TextSpan(
-                        children: [
-                          TextSpan(text: 'Notes' ,style: TextStyle(
+                    RichText(
+                        text: const TextSpan(children: [
+                      TextSpan(
+                          text: 'Notes',
+                          style: TextStyle(
                             color: Colors.cyan,
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
                           )),
-                          TextSpan(text: 'Rec', style: TextStyle(
+                      TextSpan(
+                          text: 'Rec',
+                          style: TextStyle(
                             color: Colors.orange,
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
                           )),
-                        ]
-                    )),
-
+                    ])),
                     CustomIconBtn(
                       color: Theme.of(context).colorScheme.background,
                       onPressed: () async {
@@ -84,39 +85,38 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
 
                         refreshNote();
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.edit,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 35,
                 ),
                 Expanded(
                   child: isLoading
-                      ? Center(child: CircularProgressIndicator())
+                      ? const Center(child: CircularProgressIndicator())
                       : Padding(
-                          padding: EdgeInsets.all(12),
+                          padding: const EdgeInsets.all(12),
                           child: ListView(
-                            padding: EdgeInsets.symmetric(vertical: 8),
+                            padding: const EdgeInsets.symmetric(vertical: 8),
                             children: [
                               Text(
                                 note.title,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 25,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(height: 5),
+                              const SizedBox(height: 5),
                               Text(
                                 DateFormat.yMMMd().format(note.createdTime),
                               ),
-                              SizedBox(height: 50),
+                              const SizedBox(height: 50),
                               Text(
                                 note.description,
-                                style:
-                                    TextStyle( fontSize: 22),
+                                style: const TextStyle(fontSize: 22),
                               )
                             ],
                           ),
@@ -129,21 +129,20 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.red,
           tooltip: "delete",
-          child: Icon(
+          child: const Icon(
             Icons.delete,
             size: 30,
           ),
-            onPressed: () async {
-              await NotesDatabase.instance.delete(widget.noteId);
+          onPressed: () async {
+            await NotesDatabase.instance.delete(widget.noteId);
 
-              Navigator.of(context).pop();
-            },
-        )
-    );
+            Navigator.of(context).pop();
+          },
+        ));
   }
 
   Widget editButton() => IconButton(
-      icon: Icon(Icons.edit_outlined),
+      icon: const Icon(Icons.edit_outlined),
       onPressed: () async {
         if (isLoading) return;
 
@@ -155,7 +154,7 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
       });
 
   Widget deleteButton() => IconButton(
-        icon: Icon(Icons.delete),
+        icon: const Icon(Icons.delete),
         onPressed: () async {
           await NotesDatabase.instance.delete(widget.noteId);
 

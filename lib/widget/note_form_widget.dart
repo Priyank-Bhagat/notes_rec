@@ -24,18 +24,17 @@ class NoteFormWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               buildTitle(),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               buildDescription(),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
             ],
           ),
         ),
@@ -46,11 +45,11 @@ class NoteFormWidget extends StatelessWidget {
   Widget buildTitle() => TextFormField(
         maxLines: 1,
         initialValue: title,
-        style: TextStyle(
+        style: const TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 24,
         ),
-        decoration: InputDecoration(
+        decoration: const InputDecoration(
           border: InputBorder.none,
           hintText: 'Title',
         ),
@@ -60,10 +59,10 @@ class NoteFormWidget extends StatelessWidget {
       );
 
   Widget buildDescription() => TextFormField(
-        maxLines: 5,
+        maxLines: null,
         initialValue: description,
-        style: TextStyle( fontSize: 18),
-        decoration: InputDecoration(
+        style: const TextStyle(fontSize: 18),
+        decoration: const InputDecoration(
           border: InputBorder.none,
           hintText: 'Type something...',
         ),

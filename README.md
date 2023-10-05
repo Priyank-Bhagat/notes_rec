@@ -37,7 +37,8 @@ And there are also small mini-UI features that will make this app a better exper
 </p>
 
 
-👉[Download ](https://github.com/Priyank-Bhagat/notes_rec/blob/master/test/o-p/NotesRec.apk)👈 The NotesRec App.
+## Download
+👉[Download ](https://mega.nz/file/Br1hBb4Q#oPkzZOyBeFc1akFj49q-5eVJRCyezwK2Q_tAMQiSKn4)👈 The NotesRec App.
 
 ## Getting Started
 

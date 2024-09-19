@@ -38,7 +38,7 @@ And there are also small mini-UI features that will make this app a better exper
 
 
 ## Download
-👉[Download ](https://mega.nz/file/Br1hBb4Q#oPkzZOyBeFc1akFj49q-5eVJRCyezwK2Q_tAMQiSKn4)👈 The NotesRec App.
+👉[Download ](https://drive.google.com/file/d/1p5ZXQuXdlS-DTqOIN3qJ1_CnaQtpo8R_/view?usp=sharing)👈 The NotesRec App.
 
 ## Getting Started
 

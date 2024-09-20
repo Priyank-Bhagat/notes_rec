@@ -14,7 +14,7 @@
 <p> 
     <img width="250" src="https://github.com/Priyank-Bhagat/notes_rec/assets/115228605/d6dd95c1-3eb9-424f-bf14-4b44d8f3c04f" alt="something was here🤔">
 </p>
-
+ 
 
 If you want to change something in the note, then you just need to click on the PEN ✏️  icon.
 <p> 
